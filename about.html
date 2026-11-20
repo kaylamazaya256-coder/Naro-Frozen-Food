@@ -1,0 +1,883 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>About | Naro Frozen Food Jogja</title>
+  <meta name="description" content="Kenali Naro Frozen Food Jogja, penyedia berbagai pilihan frozen food berkualitas sejak tahun 2019.">
+  <meta name="keywords" content="Naro Frozen Food Jogja, tentang kami, frozen food Jogja">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Lato:wght@100;300;400;700;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <style>
+    .text-justify {
+      text-align: justify;
+      text-justify: inter-word;
+    }
+
+    .about-page .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+      width: 100%;
+    }
+
+    .about-page .stats-grid .stat-item {
+      min-width: 0;
+      width: 100%;
+      white-space: nowrap;
+    }
+
+    .about-page .stats-grid .stat-number {
+      display: block;
+      font-size: 28px;
+      white-space: nowrap;
+    }
+
+    .about-page .stats-grid .stat-label {
+      display: block;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+
+    /* ==================================
+       STRUKTUR ORGANISASI - TEMA BIRU
+    ================================== */
+
+    .organization-section {
+      margin-top: 70px;
+      margin-bottom: 70px;
+      padding: 45px 25px;
+      background: #F2F7FC;
+      border-radius: 12px;
+    }
+
+    .organization-section h3 {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #164B78;
+    }
+
+    .organization-section .section-description {
+      margin-bottom: 40px;
+      color: #666;
+    }
+
+    .organization-chart {
+      max-width: 850px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* OWNER */
+    .org-owner {
+      width: 240px;
+      margin: 0 auto;
+      padding: 22px 15px;
+      background: #164B78;
+      color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 18px rgba(22, 75, 120, 0.18);
+    }
+
+    .org-owner i {
+      display: block;
+      font-size: 32px;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    .org-owner h4 {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .org-owner span {
+      display: block;
+      color: #DCEBFA;
+      font-size: 13px;
+      margin-top: 5px;
+    }
+
+    /* GARIS PENGHUBUNG */
+    .org-connector {
+      width: 2px;
+      height: 35px;
+      background: #7FA9CC;
+      margin: 0 auto;
+    }
+
+    .org-horizontal {
+      width: 66.66%;
+      height: 2px;
+      background: #7FA9CC;
+      margin: 0 auto;
+    }
+
+    /* POSISI STAF */
+    .org-staff-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .org-staff {
+      position: relative;
+      padding-top: 0;
+    }
+
+    .org-staff::before {
+      content: "";
+      display: block;
+      width: 2px;
+      height: 30px;
+      background: #7FA9CC;
+      margin: 0 auto;
+    }
+
+    /* KOTAK STAF */
+    .org-card {
+      height: 100%;
+      min-height: 175px;
+      padding: 25px 15px;
+      background: #fff;
+      border: 1px solid #D8E7F3;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(22, 75, 120, 0.07);
+      transition: all 0.3s ease;
+    }
+
+    .org-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(22, 75, 120, 0.15);
+    }
+
+    .org-card i {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 55px;
+      height: 55px;
+      background: #EAF3FA;
+      color: #2878B8;
+      font-size: 26px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    .org-card h4 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #164B78;
+    }
+
+    .org-card p {
+      font-size: 13px;
+      line-height: 1.6;
+      margin: 0;
+      color: #666;
+    }
+
+
+    /* RESPONSIVE MOBILE */
+    @media (max-width: 575px) {
+
+      .about-page .stats-grid {
+        gap: 10px;
+      }
+
+      .about-page .stats-grid .stat-number {
+        font-size: 21px;
+      }
+
+      .about-page .stats-grid .stat-label {
+        font-size: 11px;
+      }
+
+      .organization-section {
+        padding: 35px 15px;
+        margin-top: 45px;
+        margin-bottom: 45px;
+      }
+
+      .organization-section h3 {
+        font-size: 24px;
+      }
+
+      .org-owner {
+        width: 200px;
+      }
+
+      .org-staff-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .org-horizontal {
+        display: none;
+      }
+
+      .org-staff::before {
+        height: 20px;
+      }
+
+      .org-card {
+        min-height: auto;
+        padding: 20px 15px;
+      }
+
+    }
+  </style>
+
+</head>
+
+<body class="about-page">
+
+  <!-- Header -->
+  <header id="header" class="header fixed-top">
+
+    <div class="topbar d-flex align-items-center dark-background">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+
+        <div class="contact-info d-flex align-items-center">
+
+          <i class="bi bi-envelope d-flex align-items-center">
+            <a href="mailto:narofrozenfood@gmail.com">
+              narofrozenfood@gmail.com
+            </a>
+          </i>
+
+          <i class="bi bi-phone d-flex align-items-center ms-4">
+            <a href="https://wa.me/6287824655000" target="_blank" rel="noopener">
+              +62 878 2465 5000
+            </a>
+          </i>
+
+        </div>
+
+        <div class="social-links d-none d-md-flex align-items-center">
+
+          <a href="https://www.instagram.com/narofrozenfood_/"
+            class="instagram" target="_blank" rel="noopener">
+            <i class="bi bi-instagram"></i>
+          </a>
+
+          <a href="https://wa.me/6287824655000"
+            class="whatsapp" target="_blank" rel="noopener">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="branding d-flex align-items-center">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+
+        <a href="index.html" class="logo d-flex align-items-center">
+          <h1 class="sitename">Naro Frozen Food</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+
+          <ul>
+            <li><a href="index.html#hero">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+
+        </nav>
+
+      </div>
+    </div>
+
+  </header>
+  <!-- End Header -->
+
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title">
+
+      <div class="heading">
+
+        <div class="container">
+
+          <div class="row d-flex justify-content-center text-center">
+
+            <div class="col-lg-8">
+
+              <h1 class="heading-title">Tentang Kami</h1>
+
+              <p class="mb-0">
+                Mengenal lebih dekat Naro Frozen Food Jogja, penyedia berbagai pilihan
+                makanan beku yang praktis dan berkualitas untuk memenuhi kebutuhan
+                makanan Anda dan keluarga.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <nav class="breadcrumbs">
+
+        <div class="container">
+
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">About</li>
+          </ol>
+
+        </div>
+
+      </nav>
+
+    </div>
+    <!-- End Page Title -->
+
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-center">
+
+          <!-- About Content -->
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+
+            <div class="about-content">
+
+              <h2>Menyediakan Frozen Food Praktis dan Berkualitas</h2>
+
+              <p class="lead">
+                Naro Frozen Food Jogja merupakan usaha yang bergerak di bidang
+                penyediaan makanan beku atau frozen food. Berdiri sejak tahun 2019,
+                Naro Frozen Food hadir untuk memberikan pilihan makanan yang praktis,
+                lezat, dan mudah disiapkan untuk berbagai kebutuhan.
+              </p>
+
+              <p>
+                Kami menyediakan beragam pilihan produk frozen food, mulai dari
+                nugget, sosis, bakso, dimsum, kentang, olahan seafood, otak-otak,
+                hingga tempura. Berbagai pilihan tersebut dapat menjadi solusi
+                untuk melengkapi kebutuhan makanan sehari-hari, baik untuk konsumsi
+                keluarga maupun berbagai keperluan lainnya.
+              </p>
+
+              <p>
+                Melalui pelayanan yang ramah dan kemudahan dalam memperoleh produk,
+                Naro Frozen Food Jogja berkomitmen untuk menjadi pilihan dalam
+                memenuhi kebutuhan frozen food Anda.
+              </p>
+
+              <!-- Stats Grid -->
+              <div class="stats-grid">
+
+                <div class="stat-item">
+                  <span class="stat-number">2019</span>
+                  <span class="stat-label">Tahun Berdiri</span>
+                </div>
+
+                <div class="stat-item">
+                  <span class="stat-number">08.00–16.00</span>
+                  <span class="stat-label">Jam Operasional (WIB)</span>
+                </div>
+
+              </div>
+              <!-- End Stats Grid -->
+
+            </div>
+
+          </div>
+          <!-- End About Content -->
+
+
+          <!-- About Images -->
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+
+            <div class="image-wrapper">
+
+              <!-- FOTO BESAR: FOTO 2 -->
+              <img
+                data-local-photo="foto 2"
+                class="img-fluid main-image"
+                alt="Naro Frozen Food Jogja">
+
+              <!-- FOTO KECIL BULAT: FOTO 1 -->
+              <div class="floating-image" data-aos="zoom-in" data-aos-delay="400">
+
+                <img
+                  data-local-photo="foto 1"
+                  class="img-fluid"
+                  alt="Produk Naro Frozen Food Jogja">
+
+              </div>
+
+            </div>
+
+          </div>
+          <!-- End About Images -->
+
+        </div>
+
+
+        <!-- STRUKTUR ORGANISASI -->
+        <div class="organization-section" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="row">
+            <div class="col-lg-12 text-center">
+
+              <h3>Struktur Organisasi</h3>
+
+              <p class="section-description">
+                Struktur organisasi Naro Frozen Food Jogja dalam menjalankan
+                kegiatan operasional dan memberikan pelayanan kepada pelanggan.
+              </p>
+
+            </div>
+          </div>
+
+          <div class="organization-chart">
+
+            <!-- OWNER -->
+            <div class="org-owner">
+
+              <i class="bi bi-person-fill"></i>
+
+              <h4>OWNER</h4>
+
+              <span>Pemilik dan Penanggung Jawab Usaha</span>
+
+            </div>
+
+            <!-- CONNECTOR -->
+            <div class="org-connector"></div>
+
+            <div class="org-horizontal"></div>
+
+            <!-- STAFF -->
+            <div class="org-staff-row">
+
+              <!-- KASIR -->
+              <div class="org-staff">
+
+                <div class="org-card">
+
+                  <i class="bi bi-cash-coin"></i>
+
+                  <h4>Kasir</h4>
+
+                  <p>
+                    Melayani transaksi pembelian dan pembayaran
+                    serta memberikan pelayanan kepada pelanggan.
+                  </p>
+
+                </div>
+
+              </div>
+
+              <!-- STAF GUDANG -->
+              <div class="org-staff">
+
+                <div class="org-card">
+
+                  <i class="bi bi-box-seam"></i>
+
+                  <h4>Staf Gudang</h4>
+
+                  <p>
+                    Mengelola persediaan produk dan memeriksa stok.
+                                      </p>
+
+                </div>
+
+              </div>
+
+              <!-- STAF DISTRIBUSI -->
+              <div class="org-staff">
+
+                <div class="org-card">
+
+                  <i class="bi bi-truck"></i>
+
+                  <h4>Staf Distribusi</h4>
+
+                  <p>
+                    Menyiapkan pesanan dan bertanggung jawab
+                    atas proses pengiriman produk kepada pelanggan.
+                  </p>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+        <!-- END STRUKTUR ORGANISASI -->
+
+
+        <!-- Values Section -->
+        <div class="values-section" data-aos="fade-up" data-aos-delay="300">
+
+          <div class="row">
+
+            <div class="col-lg-12 text-center">
+
+              <h3>Nilai-Nilai Kami</h3>
+
+            </div>
+
+          </div>
+
+
+          <div class="row">
+
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+
+              <div class="value-item">
+
+                <div class="value-icon">
+                  <i class="bi bi-box-seam"></i>
+                </div>
+
+                <h4>Kualitas Produk</h4>
+
+                <p>
+                  Mengutamakan penyediaan berbagai pilihan produk frozen food
+                  untuk memenuhi kebutuhan pelanggan.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+
+              <div class="value-item">
+
+                <div class="value-icon">
+                  <i class="bi bi-clock"></i>
+                </div>
+
+                <h4>Kepraktisan</h4>
+
+                <p>
+                  Menyediakan pilihan makanan beku yang praktis dan mudah
+                  disiapkan untuk kebutuhan sehari-hari.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+
+              <div class="value-item">
+
+                <div class="value-icon">
+                  <i class="bi bi-heart"></i>
+                </div>
+
+                <h4>Kepuasan Pelanggan</h4>
+
+                <p>
+                  Mengutamakan pelayanan yang ramah dan berusaha memenuhi
+                  kebutuhan setiap pelanggan.
+                </p>
+
+              </div>
+
+            </div>
+
+
+            <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
+
+              <div class="value-item">
+
+                <div class="value-icon">
+                  <i class="bi bi-people"></i>
+                </div>
+
+                <h4>Kepercayaan</h4>
+
+                <p>
+                  Membangun hubungan baik dengan pelanggan melalui pelayanan
+                  yang konsisten dan bertanggung jawab.
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+        <!-- End Values Section -->
+
+
+        <!-- Product Categories Section -->
+        <div class="certifications-section" data-aos="fade-up" data-aos-delay="400">
+
+          <div class="row">
+
+            <div class="col-lg-12 text-center">
+
+              <h3>Beragam Pilihan Produk</h3>
+
+              <p class="section-description">
+                Temukan berbagai kategori frozen food yang tersedia di
+                Naro Frozen Food!
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+        <!-- End Product Categories Section -->
+
+      </div>
+
+    </section>
+    <!-- End About Section -->
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer id="footer" class="footer-16 footer position-relative">
+
+    <div class="container">
+
+      <div class="footer-main" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-start">
+
+          <!-- Footer Brand -->
+          <div class="col-lg-12">
+
+            <div class="brand-section">
+
+              <a href="index.html" class="logo d-flex align-items-center mb-4">
+                <span class="sitename">Naro Frozen Food Jogja</span>
+              </a>
+
+              <p class="brand-description text-justify">
+                Menyediakan berbagai pilihan frozen food yang praktis dan berkualitas
+                untuk melengkapi kebutuhan makanan yang cepat dan lezat.
+              </p>
+
+              <div class="contact-info mt-5">
+
+                <div class="contact-item">
+                  <i class="bi bi-geo-alt"></i>
+                  <span>
+                    Gg. Sengon No.4, Jaranan, Caturtunggal, Kec. Depok,<br>
+                    Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281
+                  </span>
+                </div>
+
+                <div class="contact-item">
+                  <i class="bi bi-telephone"></i>
+                  <a href="https://wa.me/6287824655000" target="_blank" rel="noopener">
+                    +62 878 2465 5000
+                  </a>
+                </div>
+
+                <div class="contact-item">
+                  <i class="bi bi-envelope"></i>
+                  <a href="mailto:narofrozenfood@gmail.com">
+                    narofrozenfood@gmail.com
+                  </a>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+          <!-- End Footer Brand -->
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <div class="bottom-content" data-aos="fade-up" data-aos-delay="300">
+
+          <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+              <div class="copyright">
+                <p>
+                  © <span class="sitename">Naro Frozen Food Jogja</span>.
+                  All rights reserved.
+                </p>
+              </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+              <div class="legal-links">
+
+                <a href="contact.html">Kontak</a>
+                <a href="product.html">Produk</a>
+
+                <div class="credits">
+                  Designed by
+                  <a href="https://bootstrapmade.com/">BootstrapMade</a>.
+                  Distributed by
+                  <a href="https://themewagon.com" target="_blank" rel="noopener">ThemeWagon</a>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+  <!-- End Footer -->
+
+
+  <!-- Scroll Top -->
+  <a href="#!" id="scroll-top"
+    class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+  <!-- Memuat Foto dari Folder assets/img -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+      const photos = document.querySelectorAll("img[data-local-photo]");
+
+      const extensions = [
+        ".jpg",
+        ".jpeg",
+        ".png",
+        ".webp",
+        ".JPG",
+        ".JPEG",
+        ".PNG",
+        ".WEBP"
+      ];
+
+      photos.forEach(function (img) {
+
+        const photoName = img.getAttribute("data-local-photo");
+        let index = 0;
+
+        function tryLoadPhoto() {
+
+          if (index >= extensions.length) {
+            console.error("Foto tidak ditemukan: " + photoName);
+            return;
+          }
+
+          const imagePath =
+            "assets/img/" + encodeURIComponent(photoName) + extensions[index];
+
+          const testImage = new Image();
+
+          testImage.onload = function () {
+            img.src = imagePath;
+          };
+
+          testImage.onerror = function () {
+            index++;
+            tryLoadPhoto();
+          };
+
+          testImage.src = imagePath;
+
+        }
+
+        tryLoadPhoto();
+
+      });
+
+    });
+  </script>
+
+</body>
+
+</html>

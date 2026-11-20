@@ -1,0 +1,820 @@
+
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Product | Naro Frozen Food Jogja</title>
+  <meta name="description" content="Temukan berbagai pilihan frozen food berkualitas dari Naro Frozen Food Jogja.">
+  <meta name="keywords" content="Naro Frozen Food, frozen food Jogja, nugget, sosis, bakso, dimsum">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- Product Page CSS -->
+  <style>
+    .product-filter {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 35px;
+    }
+
+    .product-filter button {
+      border: 1px solid var(--accent-color);
+      background: transparent;
+      color: var(--heading-color);
+      padding: 9px 18px;
+      border-radius: 25px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    .product-filter button:hover,
+    .product-filter button.active {
+      background: var(--accent-color);
+      color: #fff;
+    }
+
+    .product-card {
+      height: 100%;
+      background: var(--surface-color);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 18px rgba(0, 0, 0, 0.08);
+      transition: 0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    }
+
+    .product-image {
+      height: 190px;
+      background: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .product-image .image-placeholder {
+      font-size: 45px;
+      color: var(--accent-color);
+    }
+
+    .product-content {
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .product-category {
+      color: var(--accent-color);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 7px;
+    }
+
+    .product-content h4 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--heading-color);
+    }
+
+    .product-description {
+      font-size: 13px;
+      line-height: 1.6;
+      margin-bottom: 15px;
+      color: var(--default-color);
+    }
+
+    .btn-order {
+      display: block;
+      width: 100%;
+      text-align: center;
+      border: none;
+      background: var(--accent-color);
+      color: #fff;
+      padding: 10px 12px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s;
+      margin-top: auto;
+    }
+
+    .btn-order:hover {
+      color: #fff;
+      filter: brightness(0.9);
+    }
+
+    @media (max-width: 767px) {
+      .product-image {
+        height: 160px;
+      }
+
+      .product-filter {
+        gap: 7px;
+      }
+
+      .product-filter button {
+        padding: 8px 12px;
+        font-size: 12px;
+      }
+    }
+  </style>
+
+</head>
+
+<body class="doctors-page">
+
+  <!-- Header -->
+  <header id="header" class="header fixed-top">
+
+    <div class="topbar d-flex align-items-center dark-background">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center">
+            <a href="mailto:narofrozenfood@gmail.com">narofrozenfood@gmail.com</a>
+          </i>
+
+          <i class="bi bi-phone d-flex align-items-center ms-4">
+            <a href="https://wa.me/6287824655000" target="_blank" rel="noopener">
+              +62 878 2465 5000
+            </a>
+          </i>
+        </div>
+
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="https://www.instagram.com/narofrozenfood_/"
+            class="instagram" target="_blank" rel="noopener">
+            <i class="bi bi-instagram"></i>
+          </a>
+
+          <a href="https://wa.me/6287824655000"
+            class="whatsapp" target="_blank" rel="noopener">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="branding d-flex align-items-center">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+
+        <a href="index.html" class="logo d-flex align-items-center">
+          <h1 class="sitename">Naro Frozen Food</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html#hero">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="product.html" class="active">Product</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+      </div>
+
+    </div>
+
+  </header>
+  <!-- End Header -->
+
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title">
+
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+
+            <div class="col-lg-8">
+              <h1 class="heading-title">Produk Kami</h1>
+
+              <p class="mb-0">
+                Temukan berbagai pilihan frozen food berkualitas dari Naro Frozen Food Jogja.
+                Pilih produk favorit Anda dan lakukan pemesanan dengan mudah melalui WhatsApp.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Product</li>
+          </ol>
+        </div>
+      </nav>
+
+    </div>
+    <!-- End Page Title -->
+
+
+    <!-- Product Section -->
+    <section id="doctors" class="doctors section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Product Filter -->
+        <div class="product-filter">
+          <button type="button" class="active" data-filter="all">All</button>
+          <button type="button" data-filter="nugget">Nugget</button>
+          <button type="button" data-filter="sosis">Sosis</button>
+          <button type="button" data-filter="bakso">Bakso</button>
+          <button type="button" data-filter="dimsum">Dimsum</button>
+          <button type="button" data-filter="kentang">Kentang</button>
+          <button type="button" data-filter="seafood">Olahan Seafood</button>
+          <button type="button" data-filter="otak-otak">Otak-Otak</button>
+          <button type="button" data-filter="tempura">Tempura</button>
+        </div>
+        <!-- End Product Filter -->
+
+        <!-- Product List -->
+        <div class="row gy-4" id="product-list">
+        </div>
+        <!-- End Product List -->
+
+      </div>
+
+    </section>
+    <!-- End Product Section -->
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer id="footer" class="footer-16 footer position-relative">
+
+    <div class="container">
+
+      <div class="footer-main" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row align-items-start">
+
+          <!-- Footer Brand -->
+          <div class="col-lg-12">
+
+            <div class="brand-section">
+
+              <a href="index.html" class="logo d-flex align-items-center mb-4">
+                <span class="sitename">Naro Frozen Food</span>
+              </a>
+
+              <p class="brand-description text-justify">
+                Menyediakan berbagai pilihan frozen food yang praktis dan berkualitas
+                untuk melengkapi kebutuhan makanan yang cepat dan lezat.
+              </p>
+
+              <div class="contact-info mt-5">
+
+                <div class="contact-item">
+                  <i class="bi bi-geo-alt"></i>
+                  <span>
+                    Gg. Sengon No.4, Jaranan, Caturtunggal, Kec. Depok,<br>
+                    Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281
+                  </span>
+                </div>
+
+                <div class="contact-item">
+                  <i class="bi bi-telephone"></i>
+                  <a href="https://wa.me/6287824655000" target="_blank" rel="noopener">
+                    +62 878 2465 5000
+                  </a>
+                </div>
+
+                <div class="contact-item">
+                  <i class="bi bi-envelope"></i>
+                  <a href="mailto:narofrozenfood@gmail.com">
+                    narofrozenfood@gmail.com
+                  </a>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+          <!-- End Footer Brand -->
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <div class="bottom-content" data-aos="fade-up" data-aos-delay="300">
+
+          <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+              <div class="copyright">
+                <p>
+                  © <span class="sitename">Naro Frozen Food Jogja</span>.
+                  All rights reserved.
+                </p>
+              </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+              <div class="legal-links">
+
+                <div class="credits">
+                  Designed by
+                  <a href="https://bootstrapmade.com/">BootstrapMade</a>.
+                  Distributed by
+                  <a href="https://themewagon.com" target="_blank" rel="noopener">ThemeWagon</a>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+  <!-- End Footer -->
+
+
+  <!-- Scroll Top -->
+  <a href="#!" id="scroll-top"
+    class="scroll-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+  <!-- Product Script -->
+  <script>
+    // Nomor WhatsApp Naro Frozen Food
+    const whatsappNumber = "6287824655000";
+
+    // Daftar Kategori Produk
+    const productCategories = [
+      { id: "nugget", name: "Nugget" },
+      { id: "sosis", name: "Sosis" },
+      { id: "bakso", name: "Bakso" },
+      { id: "dimsum", name: "Dimsum" },
+      { id: "kentang", name: "Kentang" },
+      { id: "seafood", name: "Olahan Seafood" },
+      { id: "otak-otak", name: "Otak-Otak" },
+      { id: "tempura", name: "Tempura" }
+    ];
+
+    // Daftar Produk
+    // Lokasi semua foto: assets/img/
+    // Nama file mengikuti nama asli dan menggunakan ekstensi .jpg
+
+    const products = [
+
+      // KATEGORI NUGGET
+      {
+        name: "Nugget Kanzler 450gr",
+        category: "nugget",
+        image: "assets/img/Nugget Kanzler 450gr.jpg",
+        description: "Nugget ayam Kanzler dengan kemasan 450 gram. Pilihan lauk praktis untuk melengkapi hidangan keluarga."
+      },
+      {
+        name: "Nugget Champ Coin 400gr",
+        category: "nugget",
+        image: "assets/img/Nugget Champ Coin 400gr.jpg",
+        description: "Nugget ayam Champ berbentuk coin dengan kemasan 400 gram. Cocok disajikan sebagai lauk maupun camilan."
+      },
+      {
+        name: "Nugget Chicken Fiesta 400gr",
+        category: "nugget",
+        image: "assets/img/Nugget Chicken Fiesta 400gr.jpg",
+        description: "Nugget Chicken Fiesta dengan kemasan 400 gram. Pilihan makanan beku yang praktis untuk berbagai menu."
+      },
+      {
+        name: "Nugget Belfoods S 500gr",
+        category: "nugget",
+        image: "assets/img/Nugget Belfoods S 500gr.jpg",
+        description: "Nugget Belfoods S dalam kemasan 500 gram. Praktis untuk disiapkan sebagai lauk sehari-hari."
+      },
+      {
+        name: "Nugget Champ ABC 400gr",
+        category: "nugget",
+        image: "assets/img/Nugget Champ ABC 400gr.jpg",
+        description: "Nugget Champ ABC dengan kemasan 400 gram. Dapat menjadi pilihan menu praktis untuk keluarga."
+      },
+      {
+        name: "Nugget Kanzler Bubble Stick 450gr",
+        category: "nugget",
+        image: "assets/img/Nugget Kanzler Bubble Stick 450gr.jpg",
+        description: "Nugget Kanzler Bubble Stick dengan bentuk stik dan kemasan 450 gram. Cocok sebagai camilan maupun lauk."
+      },
+      {
+        name: "Nugget Kanzler Bubble Spicy 450gr",
+        category: "nugget",
+        image: "assets/img/Nugget Kanzler Bubble Spicy 450gr.jpg",
+        description: "Nugget Kanzler Bubble Spicy dengan kemasan 450 gram. Pilihan nugget dengan varian rasa pedas."
+      },
+      {
+        name: "Nugget Belfoods Stick 500gr",
+        category: "nugget",
+        image: "assets/img/Nugget Belfoods Stick 500gr.jpg",
+        description: "Nugget Belfoods berbentuk stik dengan kemasan 500 gram. Praktis untuk camilan dan hidangan keluarga."
+      },
+      {
+        name: "Nugget Chicken Stikie Fiesta 400gr",
+        category: "nugget",
+        image: "assets/img/Nugget Chicken Stikie Fiesta 400gr.jpg",
+        description: "Nugget Chicken Stikie Fiesta dengan kemasan 400 gram. Bentuk stik yang praktis untuk disajikan."
+      },
+      {
+        name: "Nugget Kanzler Bubble 450g",
+        category: "nugget",
+        image: "assets/img/Nugget Kanzler Bubble 450g.jpg",
+        description: "Nugget Kanzler Bubble dengan kemasan 450 gram. Pilihan olahan ayam beku yang praktis untuk keluarga."
+      },
+
+      // KATEGORI SOSIS
+      {
+        name: "Sosis Salam 500gr",
+        category: "sosis",
+        image: "assets/img/Sosis Salam 500gr.jpg",
+        description: "Sosis Salam dengan kemasan 500 gram. Dapat diolah menjadi berbagai hidangan, camilan, maupun pelengkap makanan."
+      },
+      {
+        name: "Sosis Yona 450gr",
+        category: "sosis",
+        image: "assets/img/Sosis Yona 450gr.jpg",
+        description: "Sosis Yona dalam kemasan 450 gram. Pilihan olahan daging yang praktis untuk berbagai menu."
+      },
+      {
+        name: "Sosis Ngetop 500gr",
+        category: "sosis",
+        image: "assets/img/Sosis Ngetop 500gr.jpg",
+        description: "Sosis Ngetop dengan kemasan 500 gram. Cocok digunakan sebagai lauk maupun tambahan berbagai hidangan."
+      },
+      {
+        name: "Sosis Chop 500gr",
+        category: "sosis",
+        image: "assets/img/Sosis Chop 500gr.jpg",
+        description: "Sosis Chop dengan kemasan 500 gram. Praktis untuk diolah menjadi menu makanan sehari-hari."
+      },
+
+      // KATEGORI BAKSO
+      {
+        name: "Bakso Sapi Adinda 450gr",
+        category: "bakso",
+        image: "assets/img/Bakso Sapi Adinda 450gr.jpg",
+        description: "Bakso sapi Adinda dengan kemasan 450 gram. Cocok untuk pelengkap sup, mi, dan berbagai hidangan."
+      },
+      {
+        name: "Bakso Sapi Candi Gemoy 500gr",
+        category: "bakso",
+        image: "assets/img/Bakso Sapi Candi Gemoy 500gr.jpg",
+        description: "Bakso sapi Candi Gemoy dengan kemasan 500 gram. Pilihan pelengkap makanan yang praktis untuk keluarga."
+      },
+      {
+        name: "Bakso Ayam Salam 500gr",
+        category: "bakso",
+        image: "assets/img/Bakso Ayam Salam 500gr.jpg",
+        description: "Bakso ayam Salam dalam kemasan 500 gram. Dapat disajikan bersama kuah maupun diolah menjadi menu lainnya."
+      },
+      {
+        name: "Bakso Ayam NgeTop 500gr",
+        category: "bakso",
+        image: "assets/img/Bakso Ayam NgeTop 500gr.jpg",
+        description: "Bakso ayam NgeTop dengan kemasan 500 gram. Praktis sebagai pelengkap sup dan berbagai hidangan."
+      },
+
+      // KATEGORI DIMSUM
+      {
+        name: "Dimsum Isi 6",
+        category: "dimsum",
+        image: "assets/img/Dimsum Isi 6.jpg",
+        description: "Dimsum dengan isi 6 buah. Pilihan camilan praktis yang dapat disajikan dengan saus pendamping."
+      },
+      {
+        name: "Dimsum Mix Isi 8",
+        category: "dimsum",
+        image: "assets/img/Dimsum Mix Isi 8.jpg",
+        description: "Dimsum mix dengan isi 8 buah. Pilihan variasi dimsum dalam satu kemasan untuk dinikmati bersama keluarga."
+      },
+      {
+        name: "Dumpling Ayam 500gr",
+        category: "dimsum",
+        image: "assets/img/Chichken Dumpling 500gr.jpg",
+        description: "Chicken dumpling dengan kemasan 500 gram. Olahan berbentuk dumpling yang cocok untuk camilan maupun pelengkap hidangan."
+      },
+      {
+        name: "Dumplung Keju 500gr",
+        category: "dimsum",
+        image: "assets/img/Cheese Dumpling 500gr.jpg",
+        description: "Dumpling Keju dengan kemasan 500 gram. Dumpling dengan varian keju yang dapat disajikan sebagai camilan atau pelengkap makanan."
+      },
+      {
+        name: "Dimsum Keju Isi 4",
+        category: "dimsum",
+        image: "assets/img/Dimsum Keju Isi 4.jpg",
+        description: "Dimsum keju dengan isi 4 buah. Pilihan camilan praktis dengan varian keju."
+      },
+      {
+        name: "Dumpling Mix Shifudo 500gr",
+        category: "dimsum",
+        image: "assets/img/Dumpling Mix Shifudo 500gr.jpg",
+        description: "Dumpling mix Shifudo dengan kemasan 500 gram. Pilihan dumpling aneka variasi untuk melengkapi hidangan."
+      },
+
+      // KATEGORI KENTANG
+      {
+        name: "Kentang Gogofries Straight Cut 1kg",
+        category: "kentang",
+        image: "assets/img/Kentang Gogofries Straight Cut 1kg.jpg",
+        description: "Kentang beku Gogofries potongan straight cut dengan kemasan 1 kg. Cocok sebagai camilan maupun pelengkap makanan."
+      },
+      {
+        name: "Kentang Gogofries Shoestring 1kg",
+        category: "kentang",
+        image: "assets/img/Kentang Gogofries Shoestring 1kg.jpg",
+        description: "Kentang beku Gogofries potongan shoestring dengan kemasan 1 kg. Pilihan kentang goreng dengan potongan tipis."
+      },
+      {
+        name: "Kentang Home 1kg",
+        category: "kentang",
+        image: "assets/img/Kentang Home 1kg.jpg",
+        description: "Kentang beku Home dengan kemasan 1 kg. Praktis untuk diolah menjadi kentang goreng atau camilan."
+      },
+
+      // KATEGORI OLAHAN SEAFOOD
+      {
+        name: "Scallop Indomina 200gr",
+        category: "seafood",
+        image: "assets/img/Scallop Indomina 200gr.jpg",
+        description: "Scallop Indomina dengan kemasan 200 gram. Olahan seafood yang dapat digunakan sebagai pelengkap berbagai hidangan."
+      },
+      {
+        name: "Bakso Ikan dan Udang Teman Laut 500gr",
+        category: "seafood",
+        image: "assets/img/Bakso Ikan dan Udang Teman Laut 500gr.jpg",
+        description: "Bakso ikan dan udang Teman Laut dengan kemasan 500 gram. Cocok untuk sup, steamboat, dan berbagai hidangan seafood."
+      },
+      {
+        name: "Frozen Shrimp 500gr",
+        category: "seafood",
+        image: "assets/img/Frozen Shrimp 500gr.jpg",
+        description: "Frozen shrimp dengan kemasan 500 gram. Pilihan udang beku yang praktis untuk diolah menjadi berbagai masakan."
+      },
+
+      // KATEGORI OTAK-OTAK
+      {
+        name: "Otak-Otak Pak Den 500gr",
+        category: "otak-otak",
+        image: "assets/img/Otak-Otak Pak Den 500gr.jpg",
+        description: "Otak-otak Pak Den dengan kemasan 500 gram. Olahan berbahan ikan yang cocok sebagai camilan maupun pelengkap hidangan."
+      },
+      {
+        name: "Otak-Otak Indomina 200gr",
+        category: "otak-otak",
+        image: "assets/img/Otak-Otak Indomina 200gr.jpg",
+        description: "Otak-otak Indomina dengan kemasan 200 gram. Praktis untuk disajikan sebagai camilan atau pelengkap makanan."
+      },
+      {
+        name: "Otak-Otak Bilqis 200gr",
+        category: "otak-otak",
+        image: "assets/img/Otak-Otak Bilqis 200gr.jpg",
+        description: "Otak-otak Bilqis dengan kemasan 200 gram. Pilihan olahan ikan beku yang mudah disiapkan."
+      },
+      {
+        name: "Otak-Otak Minaku 500gr",
+        category: "otak-otak",
+        image: "assets/img/Otak-Otak Minaku 500gr.jpg",
+        description: "Otak-otak Minaku dengan kemasan 500 gram. Cocok untuk camilan maupun tambahan berbagai menu makanan."
+      },
+
+      // KATEGORI TEMPURA
+      {
+        name: "Tempura Burger ILM 500GR",
+        category: "tempura",
+        image: "assets/img/Tempura Burger ILM 500GR.jpg",
+        description: "Tempura Burger ILM dengan kemasan 500 gram. Olahan beku berbentuk burger yang praktis untuk berbagai sajian."
+      },
+      {
+        name: "Tempura Bintang ILM 500gr",
+        category: "tempura",
+        image: "assets/img/Tempura Bintang ILM 500gr.jpg",
+        description: "Tempura Bintang ILM dengan kemasan 500 gram. Memiliki bentuk bintang yang menarik untuk camilan dan pelengkap makanan."
+      },
+      {
+        name: "Tempura Panjang EllaFroze 500gr",
+        category: "tempura",
+        image: "assets/img/Tempura Panjang EllaFroze 500gr.jpg",
+        description: "Tempura Panjang EllaFroze dengan kemasan 500 gram. Olahan beku berbentuk panjang yang praktis untuk disajikan."
+      },
+      {
+        name: "Tempura Kaki Naga Minaku 500gr",
+        category: "tempura",
+        image: "assets/img/Tempura Kaki Naga Minaku 500gr.jpg",
+        description: "Tempura Kaki Naga Minaku dengan kemasan 500 gram. Cocok sebagai camilan maupun pelengkap hidangan keluarga."
+      },
+      {
+        name: "Tempura Sukoi 500gr",
+        category: "tempura",
+        image: "assets/img/Tempura Sukoi 500gr.jpg",
+        description: "Tempura Sukoi dengan kemasan 500 gram. Pilihan olahan frozen food yang praktis untuk berbagai kesempatan."
+      },
+      {
+        name: "Tempura Lonjong ILM 500gr",
+        category: "tempura",
+        image: "assets/img/Tempura Lonjong ILM 500gr.jpg",
+        description: "Tempura Lonjong ILM dengan kemasan 500 gram. Olahan beku berbentuk lonjong yang cocok sebagai camilan maupun lauk."
+      }
+
+    ];
+
+
+    // Mengubah ID Kategori Menjadi Nama Kategori
+    function getCategoryName(categoryId) {
+      const category = productCategories.find(item => item.id === categoryId);
+      return category ? category.name : categoryId;
+    }
+
+
+    // Menampilkan Produk
+    const productList = document.getElementById("product-list");
+
+
+    function renderProducts(filter = "all") {
+
+      productList.innerHTML = "";
+
+      const filteredProducts = filter === "all"
+        ? products
+        : products.filter(product => product.category === filter);
+
+
+      filteredProducts.forEach((product, index) => {
+
+        const card = document.createElement("div");
+
+        card.className = "col-lg-3 col-md-6";
+        card.setAttribute("data-aos", "fade-up");
+        card.setAttribute("data-aos-delay", String((index % 4) * 100));
+
+        const categoryName = getCategoryName(product.category);
+
+        card.innerHTML = `
+
+          <div class="product-card">
+
+            <div class="product-image">
+
+              <img
+                src="${product.image}"
+                alt="${product.name}"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+
+              <div class="image-placeholder" style="display:none;">
+                <i class="bi bi-image"></i>
+              </div>
+
+            </div>
+
+            <div class="product-content">
+
+              <span class="product-category">
+                ${categoryName}
+              </span>
+
+              <h4>${product.name}</h4>
+
+              <p class="product-description">
+                ${product.description}
+              </p>
+
+              <a
+                href="https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                  "Halo Naro Frozen Food Jogja, saya ingin memesan produk berikut:\n\n" +
+                  "Nama Produk: " + product.name + "\n" +
+                  "Kategori: " + categoryName + "\n\n" +
+                  "Mohon informasi harga dan ketersediaan produk tersebut. Terima kasih."
+                )}"
+                class="btn-order"
+                target="_blank"
+                rel="noopener">
+
+                <i class="bi bi-whatsapp"></i>
+                Pesan via WhatsApp
+
+              </a>
+
+            </div>
+
+          </div>
+
+        `;
+
+        productList.appendChild(card);
+
+      });
+
+    }
+
+
+    // Filter Kategori Produk
+    document.querySelectorAll(".product-filter button").forEach(button => {
+
+      button.addEventListener("click", function () {
+
+        document.querySelectorAll(".product-filter button")
+          .forEach(item => item.classList.remove("active"));
+
+        this.classList.add("active");
+
+        renderProducts(this.dataset.filter);
+
+      });
+
+    });
+
+
+    // Menampilkan Semua Produk Saat Halaman Dibuka
+    renderProducts("all");
+
+  </script>
+
+</body>
+
+</html>
